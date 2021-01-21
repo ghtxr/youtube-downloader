@@ -11,12 +11,18 @@
 
 <form>
     <input type="text" value="" size="80" id="txt_url">
-    <input type="button" id="btn_fetch" value="Download">
+    <input type="button" id="btn_fetch" value="Download" onclick="ab1_Click()">
 </form>
-
-
-    </center>
-
+    
+<script>
+   function ab1_Click() {
+   var vid1 = document.getElementById("yvideo");
+   var v = "visible"; 
+   if (vid1.style.visibility != "hidden") { v = "hidden"; }
+   vid1.style.visibility =  v; 
+}
+</script>
+    
 <script>
     $(function () {
 
@@ -62,7 +68,11 @@
 
     });
 </script>
-
+<video id="yvideo" width="800" height="600" controls>
+    <source src="" type="video/mp4"/>
+    <em>Sorry, your browser doesn't support HTML5 video.</em>
+</video>
+    </center>
 </body>
 </html>
 
