@@ -5,7 +5,7 @@
     <title>youtube downloader</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  <style>   
-    #yvideo {
+    #bvideo {
       visibility:hidden;
 }
     </style>
@@ -16,15 +16,20 @@
 
 <form>
     <input type="text" value="" size="80" id="txt_url">
-    <input type="button" id="btn_fetch" value="Download" onclick="ab1_Click()">
+    <input type="button" id="btn_fetch" value="Download" onclick="toggle()">
 </form>
     
-<script>
-   function ab1_Click() {
-   var vid1 = document.getElementById("yvideo");
-   var v = "visible"; 
-   if (vid1.style.visibility != "hidden") { v = "hidden"; }
-   vid1.style.visibility =  v; 
+<script type="text/javascript">
+
+function toggle(bvideo)
+{
+	node = document.getElementById(bvideo);
+	if (node.style.visibility=="hidden")
+	{
+		node.style.visibility = "visible";
+		node.style.height = "auto";			
+	}
+	
 }
 </script>
     
@@ -73,10 +78,11 @@
 
     });
 </script>
+ <div id="bvideo">
 <video id="yvideo" width="800" height="600" controls>
     <source src="" type="video/mp4"/>
     <em>Sorry, your browser doesn't support HTML5 video.</em>
-</video>
+     </video></div>
     </center>
 </body>
 </html>
