@@ -11,7 +11,7 @@
 
 <form>
     <input type="text" value="" size="80" id="txt_url">
-    <input type="button" id="btn_fetch" value="Download">
+    <input type="button" id="btn_fetch" value="Download" onclick="doFunction();">
 </form>
 
 <video width="800" height="600" controls>
@@ -21,7 +21,7 @@
     </center>
 
 <script>
-    $(function () {
+    document.getElementById("btn_fetch").onclick = function () {
 
         $("#btn_fetch").click(function () {
 
